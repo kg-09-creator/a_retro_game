@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suburban Delivery Dash</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="game-container">
+        <div id="hud" class="hidden">
+            <div class="hud-item">Distance Left: <span id="distance-txt">1000m</span></div>
+            <div class="hud-item">Time Left: <span id="time-txt">4:30</span></div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div id="start-screen" class="screen">
+            <h1>SUBURBAN DELIVERY DASH</h1>
+            <p class="plot">
+                You are a neighborhood delivery hero on an electric cargo bike! 
+                Your mission is to deliver a hot package to a mansion <strong>1,000 meters</strong> away. 
+                You have exactly <strong>4.5 minutes</strong> before the client cancels. 
+                <br><br>
+                Watch out for cars, wide trucks, construction barriers, and hanging tree branches. 
+                Steer clear of the loose sand on the road shoulders! Hit the green checkpoints for a speed boost.
+            </p>
+            <p class="controls-hint">Controls: Arrow Keys or WASD to Move/Duck</p>
+            <button id="start-btn" class="retro-btn">START DELIVERY</button>
+        </div>
+
+        <div id="countdown-screen" class="screen hidden">
+            <h1 id="countdown-text">3</h1>
+        </div>
+
+        <div id="end-screen" class="screen hidden">
+            <h1 id="end-title">Game Over</h1>
+            <p id="end-message"></p>
+            <button id="restart-btn" class="retro-btn" style = "margin-top: 20px" >PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <audio id="countdown_full" src="sounds/countdown_full.mp3"></audio>
+    <audio id="gameplay_music" src="sounds/arcade_rac.mp3" loop></audio>
+</body>
+</html>
