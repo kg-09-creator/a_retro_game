@@ -558,5 +558,4 @@ function drawPlayer(horizon) {
     ctx.restore();
 }
 
-// Render base initial scene structure
 renderStaticBackground();
